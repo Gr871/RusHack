@@ -8,12 +8,17 @@ public class InputFieldHelper : MonoBehaviour
     // Start is called before the first frame update
     public GameObject HelpPanel;
     public Animator animator;
+    
+
     private bool isShowed = false;
     //[SerializeField] private Sprite background;
+
+    
 
     public void Start()
     {
         animator = HelpPanel.GetComponent<Animator>();
+        
     }
 
     public void ChangePriority(int priority)
