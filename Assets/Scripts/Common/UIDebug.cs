@@ -20,11 +20,11 @@ namespace Scripts.Common
         {
             WWWForm form = new WWWForm();
             form.AddField("Keyword", "Hello");
-            DBManager.Instance.Upload(url.text, form, DB_Test_Callback);
+            DBManager.Upload(url.text, form, DB_Test_Callback);
         }
         public void DB_Test_Get()
         {
-            DBManager.Instance.Download(url.text, DB_Test_Callback);
+            DBManager.Download(url.text, DB_Test_Callback);
         }
 
 

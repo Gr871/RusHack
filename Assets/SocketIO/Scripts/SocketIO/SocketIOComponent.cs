@@ -40,6 +40,23 @@ namespace SocketIO
 {
 	public class SocketIOComponent : MonoBehaviour
 	{
+		#region Singleton
+		public static SocketIOComponent Instance { get; private set; }
+
+		private bool Init()
+		{
+			if (Instance != null)
+			{
+				Destroy(this);
+				return false;
+			}
+			Instance = this;
+			return true;
+		}
+		#endregion
+		
+		
+		
 		#region Public Properties
 
 		public string url = "ws://127.0.0.1:4567/socket.io/?EIO=4&transport=websocket";
@@ -91,6 +108,9 @@ namespace SocketIO
 
 		public void Awake()
 		{
+			if(!Init())
+				return;
+			
 			encoder = new Encoder();
 			decoder = new Decoder();
 			parser = new Parser();
@@ -155,6 +175,9 @@ namespace SocketIO
 
 		public void OnDestroy()
 		{
+			if (Instance == this)
+				Instance = null;
+			
 			if (socketThread != null) 	{ socketThread.Abort(); }
 			if (pingThread != null) 	{ pingThread.Abort(); }
 		}

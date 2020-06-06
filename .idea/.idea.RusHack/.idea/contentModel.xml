@@ -29,11 +29,12 @@
             <e p="File.cs" t="Include" />
             <e p="FileDialog.cs" t="Include" />
           </e>
+          <e p="NavigateManager.cs" t="Include" />
           <e p="Network" t="Include">
-            <e p="ClientSocketIO.cs" t="Include" />
             <e p="DBManager.cs" t="Include" />
             <e p="UrlContainer.cs" t="Include" />
           </e>
+          <e p="PlayerManager.cs" t="Include" />
           <e p="PropertyAttributes" t="Include">
             <e p="ArrayElementTitleAttribute.cs" t="Include" />
           </e>
@@ -47,13 +48,23 @@
             <e p="SmileWindow.cs" t="Include" />
             <e p="TextManager.cs" t="Include" />
             <e p="TextMeshProAppender.cs" t="Include" />
+            <e p="TextSubmitClass.cs" t="Include" />
           </e>
           <e p="Texture" t="Include">
             <e p="TextureManager.cs" t="Include" />
           </e>
           <e p="UI" t="Include">
+            <e p="Authorize" t="Include">
+              <e p="InputFieldHelper.cs" t="Include" />
+            </e>
             <e p="ChatWindowController.cs" t="Include" />
-            <e p="InputFieldHelper.cs" t="Include" />
+            <e p="ClientBack" t="Include">
+              <e p="AuthorizeSend.cs" t="Include" />
+            </e>
+            <e p="Hostel" t="Include">
+              <e p="HostelAnimatorController.cs" t="Include" />
+              <e p="PrivateChatNumRotation.cs" t="Include" />
+            </e>
             <e p="UIResizer" t="Include">
               <e p="ImageResizer.cs" t="Include" />
               <e p="IResizer.cs" t="Include" />
@@ -61,6 +72,10 @@
               <e p="VideoResizer.cs" t="Include" />
               <e p="VideoTranslationResizer.cs" t="Include" />
             </e>
+          </e>
+          <e p="UI Work" t="Include">
+            <e p="MainChatcontainer.cs" t="Include" />
+            <e p="SelectIcons.cs" t="Include" />
           </e>
           <e p="Utils" t="Include">
             <e p="Attributes.cs" t="Include" />

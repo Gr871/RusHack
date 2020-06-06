@@ -57,7 +57,7 @@ namespace Scripts.Test
                     };
                     
                     //Debug.Log("Rere");
-                    Scripts.Network.DBManager.Instance.Upload(UrlKeywords.SignUp, obj.GetForm(), (b, s) => { Debug.Log($"Success?:{b} | Info:{s}");});
+                    Scripts.Network.DBManager.Upload(UrlKeywords.SignUp, obj.GetForm(), (b, s) => { Debug.Log($"Success?:{b} | Info:{s}");});
                 },  container
             );
         }

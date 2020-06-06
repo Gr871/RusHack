@@ -8,6 +8,9 @@ namespace Scripts.Utils.ExchangeDatas
     {
         public string user;
         public string pass;
+
+        public bool Validate
+            => !(string.IsNullOrEmpty(user) || string.IsNullOrEmpty(pass));
     }
 
     

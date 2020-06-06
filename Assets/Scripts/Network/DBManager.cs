@@ -72,15 +72,15 @@ namespace Scripts.Network
         
 
 
-        public void Upload(UrlKeywords urlKey, WWWForm form, System.Action<bool, string> callback)
+        public static void Upload(UrlKeywords urlKey, WWWForm form, System.Action<bool, string> callback)
         {
-            Upload(urlContainer.ValueByKey(urlKey), form, callback);
+            Upload(Instance.urlContainer.ValueByKey(urlKey), form, callback);
         }
-        public void Upload(string url, WWWForm form, System.Action<bool, string> callback)
+        public static void Upload(string url, WWWForm form, System.Action<bool, string> callback)
         {
-            if(!CheckUrlRequests(url))
+            if(!Instance.CheckUrlRequests(url))
                 return;
-            StartCoroutine(Post(url, form, callback));
+            Instance.StartCoroutine(Instance.Post(url, form, callback));
         }
         private IEnumerator Post(string url, WWWForm form, System.Action<bool, string> callback)
         {
@@ -97,15 +97,15 @@ namespace Scripts.Network
         }
         
         
-        public void Download(UrlKeywords urlKey, System.Action<bool, string> callback)
+        public static void Download(UrlKeywords urlKey, System.Action<bool, string> callback)
         {
-            Download(urlContainer.ValueByKey(urlKey), callback);
+            Download(Instance.urlContainer.ValueByKey(urlKey), callback);
         }
-        public void Download(string url, System.Action<bool, string> callback)
+        public static void Download(string url, System.Action<bool, string> callback)
         {
-            if(!CheckUrlRequests(url))
+            if(!Instance.CheckUrlRequests(url))
                 return;
-            StartCoroutine(Get(url, callback));
+            Instance.StartCoroutine(Instance.Get(url, callback));
         }
         private IEnumerator Get(string url, System.Action<bool, string> callback)
         {
