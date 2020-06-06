@@ -38,8 +38,8 @@ namespace Scripts.Test
     {
         [SerializeField] private InputField roomField;
         [SerializeField] private InputField textField;
-        [SerializeField] private Text window;
-        [SerializeField] private Text msgwindow;
+        [SerializeField] private UnityEngine.UI.Text window;
+        [SerializeField] private UnityEngine.UI.Text msgwindow;
     
         private SocketIOComponent socket;
     

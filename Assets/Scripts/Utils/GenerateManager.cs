@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using JetBrains.Annotations;
+using TMPro;
 using UnityEngine;
 
 namespace Scripts.Utils
@@ -45,7 +46,7 @@ namespace Scripts.Utils
         private void Start()
         {
             Instance.dictTypes.Clear();
-            Instance.dictTypes.Add(typeof(UnityEngine.UI.Text), GenerateDataType.Text);
+            Instance.dictTypes.Add(typeof(TextMeshProUGUI), GenerateDataType.Text);
             Instance.dictTypes.Add(typeof(UnityEngine.UI.RawImage), GenerateDataType.Texture);
             Instance.dictTypes.Add(typeof(Video.VideoToTexture), GenerateDataType.Video);
         }

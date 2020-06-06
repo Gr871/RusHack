@@ -74,16 +74,16 @@ MonoBehaviour:
     m_HashCode: -1358152348
   - m_ElementType: 2
     m_Unicode: 0
-    m_GlyphIndex: 9
-    m_Scale: 1
-    m_Name: LaughM
-    m_HashCode: -1358152326
-  - m_ElementType: 2
-    m_Unicode: 0
     m_GlyphIndex: 13
     m_Scale: 1
     m_Name: LaughH
     m_HashCode: -1358152321
+  - m_ElementType: 2
+    m_Unicode: 0
+    m_GlyphIndex: 9
+    m_Scale: 1
+    m_Name: LaughM
+    m_HashCode: -1358152326
   - m_ElementType: 2
     m_Unicode: 0
     m_GlyphIndex: 10
