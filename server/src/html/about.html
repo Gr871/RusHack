@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="ml-3">API</h3>
+        <div class="list-group mb-5 ml-3 mr-3">
+            <div class="mb-2"> Работа с пользователями: </div>
+            <li class="list-group-item"><span class="mr-5 text-success">Получение
+                    пользователя:</span>http://10.13.4.52:5000/
+            </li>
+            <li class="list-group-item"><span class="mr-5 text-success">Добавление пользователя
+                    (отлажено):</span>http://10.13.4.52:5000/api/add/users/
+                <ul class="mt-3" style="list-style-type: none;">
+                    <table>
+                        <tr>
+                            <td class="pr-3 pb-3">
+                                Входные данные
+                            </td>
+                            <td class="pl-3 pb-3">
+                                Выходные данные
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pr-3 pb-3">
+                                <li>req.body.user;</h1>
+                                <li>req.body.pass;</h1>
+                                <li>req.body.firstName;</h1>
+                                <li>req.body.lastName;</h1>
+                                <li>req.body.email;</h1>
+                                <li>req.body.dateOfBirth;</h1>
+                                <li>req.body.company</li>
+                                <li>req.body.position</li>
+                                <li>req.body.country;</li>
+                                <li>req.body.language;</li>
+                                <li>req.body.hobbies;</li>
+                                <li>req.body.photo;</li>
+                            </td>
+                            <td class="pl-3 pb-3">
+
+                            </td>
+                        </tr>
+                    </table>
+                </ul>
+            </li>
+            <li class="list-group-item"><span class="mr-5 text-success">Авторизация пользователя
+                    (отлажено):</span>http://10.13.4.52:5000/api/find/users/
+                <ul class="mt-3" style="list-style-type: none;">
+                    <table>
+                        <tr>
+                            <td class="pr-3 pb-3">Входные данные</td>
+                            <td class="pl-3 pb-3">Выходные данные</td>
+                        </tr>
+                        <tr>
+                            <td class="pr-3">
+                                <li>login;</li>
+                                <li>password;</li>
+                            </td>
+                            <td class="pl-3">
+                                <li>"first_name_users": "Dmitryy",</li>
+                                <li>"last_name_users": "Vyzhgin",</li>
+                                <li>"email_users": "vyzhgin.dmitryy@gmail.com",</li>
+                                <li>"country_users": "Russia",</li>
+                                <li>"canals_users": 1,</li>
+                                <li>"id_users": 2</li>
+                            </td>
+                        </tr>
+                    </table>
+
+                </ul>
+            </li>
+            </li>
+        </div>
+        <div class="list-group mb-5 ml-3 mr-3">
+            <div class="mb-2"> Работа с сообщениями: </div>
+            <li class="list-group-item"><span class="mr-5 text-success">Отправка сообщения:
+                    (отлажено)</span>http://10.13.4.52:5000/api/add/tasks/
+                <ul class="mt-3" style="list-style-type: none;">
+                    <li>text</li>
+                    <li>canals</li>
+                    <li>users</li>
+                    <li>media</li>
+                </ul>
+            </li>
+        </div>
+        <div class="list-group mb-5 ml-3 mr-3">
+            <div class="mb-2"> Получение видео: </div>
+            <li class="list-group-item"><span class="mr-5 text-success">Видео:</span> http://10.13.4.52:5000/get/video/
+            </li>
+        </div>
+</body>
+
+</html>
