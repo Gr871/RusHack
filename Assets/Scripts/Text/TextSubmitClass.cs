@@ -40,7 +40,7 @@ namespace Scripts.Text
             Dictionary<string, string> kvps = new Dictionary<string, string>
             {
                 {"mess", value},
-                {"room", GetComponentInParent<UI.Hostel.HostelAnimatorController>().currentChannel},
+                {"room", GetComponentInParent<UI.Privatechat.PrivateChatMainController>().currentChannel},
                 {"login", PlayerManager.Instance.loginData.user}
             };
             socket.Emit("reqMes", JSONObject.Create(kvps));

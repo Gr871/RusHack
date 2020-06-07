@@ -15,7 +15,7 @@ namespace Scripts.Video
         public VideoPlayer source => _source;
         public RectTransform rectTransform => destination.rectTransform;
         
-        private void Start()
+        private void OnEnable()
         {
             if(playOnStart)
                 Run();

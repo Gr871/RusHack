@@ -5,7 +5,7 @@ using UnityEngine.UI;
 namespace Scripts.Video
 {
     public enum WebCamDestinationType {RawImage, Renderer}
-    public class WebCamVideo: MonoBehaviour
+    public class WebCamVideo: MonoBehaviour, IStreamer
     {
         private int camID = -1;
         [SerializeField] private WebCamDestinationType type;

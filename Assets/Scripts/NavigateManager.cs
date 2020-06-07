@@ -28,12 +28,19 @@ namespace Scripts
         }
         #endregion
         
-        [SerializeField] private GameObject ChatTypeSelectWindow;
+        [SerializeField] private GameObject PrivateChatWindow;
+        [SerializeField] private GameObject MainMenu;
         
-        public static void GoToChatTypeSelectWindow(GameObject currentWindow)
+        public void GoToPrivateChatWindow(GameObject currentWindow)
         {
             currentWindow.SetActive(false);
-            Instance.ChatTypeSelectWindow.SetActive(true);
+            Instance.PrivateChatWindow.SetActive(true);
+        }
+
+        public static void GoToMainMenu(GameObject currentWindow)
+        {
+            currentWindow.SetActive(false);
+            Instance.MainMenu.SetActive(true);
         }
         
     }
