@@ -38,6 +38,14 @@ namespace Scripts.UI
 
             ResizeWindow();
         }
+        public void Clear()
+        {
+            while (pastedElements.Count != 0)
+            {
+                Destroy(pastedElements[0].gameObject);
+                pastedElements.RemoveAt(0);
+            }
+        }
 
         private float SetAtWindow(RectTransform element, float lastPosition)
         {

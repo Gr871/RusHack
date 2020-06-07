@@ -7,7 +7,7 @@ namespace Scripts.Text
     {
         [SerializeField] private TextMeshProUGUI field;
         
-        public void AppendText(string text)
+        public void AppendText(string text)//New Text <sprite index=14>
         {
             field.text += text;
         }

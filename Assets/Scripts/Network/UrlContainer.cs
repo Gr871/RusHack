@@ -5,7 +5,7 @@ using UnityEngine.Rendering;
 
 namespace Scripts.Network.Url
 {
-    public enum UrlKeywords {Null = 0, SignUp, LogIn, LogOut, Update}
+    public enum UrlKeywords {Null = 0, SignUp, LogIn, LogOut, Update, Sms}
     
     [CreateAssetMenu(fileName = "urlContainer", menuName = "Network/UrlContainer")]
     public class UrlContainer: ScriptableObject

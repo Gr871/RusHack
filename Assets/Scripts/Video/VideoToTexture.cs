@@ -8,6 +8,7 @@ namespace Scripts.Video
     public class VideoToTexture: MonoBehaviour
     {
         [SerializeField] private bool playOnStart = false;
+        [SerializeField] private bool autoPlay = false;
         [SerializeField]private RawImage destination;
         [SerializeField]private VideoPlayer _source;
         [SerializeField] private UI.Resize.VideoResizer resizer;
@@ -34,7 +35,8 @@ namespace Scripts.Video
         private void PlayOnReady(VideoPlayer player)
         {
             destination.texture = player.texture;
-            resizer.SetWidth(destination.rectTransform.GetWidth());
+            if(resizer != null)
+                resizer.SetWidth(destination.rectTransform.GetWidth());
             player.Play();
         }
 
@@ -44,6 +46,20 @@ namespace Scripts.Video
 
             source.prepareCompleted += PlayOnReady;
             source.Prepare();
+        }
+
+        private void FixedUpdate()
+        {
+            if(!autoPlay)
+                return;
+            
+            if(!source.isPrepared)
+                return;
+
+            if (source.isPaused && destination.color.a > 0.1f)
+                source.Play();
+            else if (source.isPlaying && destination.color.a < 0.1f)
+                source.Pause();
         }
     }
 }

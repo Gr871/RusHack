@@ -13,12 +13,19 @@ namespace Scripts.Video
         [SerializeField] private GameObject noCameraText;
         [SerializeField] private bool playOnAwake = true;
 
+        
+        
         public WebCamTexture webCam { get; private set; }
         
-        private void Start()
+        private void OnEnable()
         {
             if(playOnAwake)
                 Run();
+        }
+
+        private void OnDisable()
+        {
+            Stop();
         }
 
         public void Run()
@@ -34,11 +41,16 @@ namespace Scripts.Video
                     GetComponent<RawImage>().texture = webCam;
                     break;
                 }
+                case WebCamDestinationType.Renderer:
+                {
+                    GetComponent<Renderer>().material.mainTexture = webCam;
+                    break;
+                }
             }
-            resizer.SetWidth(GetComponent<RectTransform>().GetWidth());
+            if(resizer != null)
+                resizer.SetWidth(GetComponent<RectTransform>().GetWidth());
             webCam.Play();
         }
-
         public void Stop()
         {
             if(webCam == null)
@@ -51,11 +63,17 @@ namespace Scripts.Video
                   {
                       GetComponent<RawImage>().texture = null;
                       break;
-                  }  
+                  }
+              case WebCamDestinationType.Renderer:
+                  {
+                    GetComponent<Renderer>().material.mainTexture = null;
+                    break;
+                  }
             }
             webCam.Stop();
             webCam = null;
         }
+        
         
         public void SwitchCamera()
         {
@@ -72,10 +90,12 @@ namespace Scripts.Video
         private void NoCameras()
         {
             camID = -1;
+            if(noCameraText == null)
+                return;
+            
             noCameraText.SetActive(true);
             InvokeRepeating("InvNoCamera", 0, 1);
         }
-
         private void InvNoCamera()
         {
             if (WebCamTexture.devices.Length == 0)

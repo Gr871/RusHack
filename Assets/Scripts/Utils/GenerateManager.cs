@@ -46,7 +46,7 @@ namespace Scripts.Utils
         private void Start()
         {
             Instance.dictTypes.Clear();
-            Instance.dictTypes.Add(typeof(TextMeshProUGUI), GenerateDataType.Text);
+            Instance.dictTypes.Add(typeof(Text.TextMeshProAppender), GenerateDataType.Text);
             Instance.dictTypes.Add(typeof(UnityEngine.UI.RawImage), GenerateDataType.Texture);
             Instance.dictTypes.Add(typeof(Video.VideoToTexture), GenerateDataType.Video);
         }

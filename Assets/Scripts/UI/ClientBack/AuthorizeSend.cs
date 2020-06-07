@@ -43,8 +43,8 @@ namespace Scripts.UI.ClientBack
                 return; //Не найден пользователь
 
             PlayerManager.Instance.loginData = logInData;
-            
-            NavigateManager.GoToChatTypeSelectWindow(gameObject);
+            gameObject.SetActive(false);
+            MainMenuController.instance.MainMenuSpawn();
         }
         
     }
